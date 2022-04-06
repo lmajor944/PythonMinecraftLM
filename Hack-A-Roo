@@ -17,4 +17,14 @@ mc.setBlocks(x, y, z, x + width, y + height, z + length, blockType)
 mc.setBlocks(x + 1, y + 1, z + 1, x + width - 1, y + height - 1, z + length - 1, air)
 mc.setBlocks(x + 1, y + 1, z + 1, x + width - 3, y + height - 3, z + length - 3, diamond)
 
+password = "incorrect"
+count = 0
+
+while count < 4:
+  attempt = input("What is the Password?")
+  if attempt == "password":
+    break
+  if attempt != "password":
+    count + 1
+
 
