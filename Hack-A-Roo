@@ -1,0 +1,20 @@
+from mcpi.minecraft import minecraft
+mc = Minecraft.create()
+#password is decoded from rot13
+#the code will have an error when we use a chromebookpos = mc.player.getPos()
+
+x, y, z = pos.x, pos.y, pos.z
+
+width = 10
+height = 5
+length = 6
+
+blockType = 1
+air = 0
+diamond = 57
+
+mc.setBlocks(x, y, z, x + width, y + height, z + length, blockType)
+mc.setBlocks(x + 1, y + 1, z + 1, x + width - 1, y + height - 1, z + length - 1, air)
+mc.setBlocks(x + 1, y + 1, z + 1, x + width - 3, y + height - 3, z + length - 3, diamond)
+
+
